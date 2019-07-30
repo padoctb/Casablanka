@@ -7,6 +7,18 @@
   .introduction__text {
     font-size: 16px;
   }
+  .ui-button {
+    padding: 20px 30px;
+    &-small {
+      padding: 16px 26px !important;
+      .ui-button__text {
+        font-size: 18px !important;
+      }
+    }
+    &__text {
+      font-size: 22px;
+    }
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10-11 STYLES
