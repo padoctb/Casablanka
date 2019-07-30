@@ -7,6 +7,7 @@ body {
   height: 100%;
 }
 
+// SLIDEOUT STYLES
 .slideout-menu {
   position: fixed;
   top: 0;
@@ -50,6 +51,7 @@ body {
   margin: 0 auto;
 }
 
+// HEADER
 .main-header {
   height: 100vh;
   background-color: #ea9d48;
@@ -163,3 +165,28 @@ body {
     }
   }
 }
+
+.introduction {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $bj-bold;
+  }
+  &__line {
+    @include line(#000, 65px, 65px);
+    left: 0;
+    margin-left: 0;
+  }
+  &__text {
+    font-family: $amble-light;
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
