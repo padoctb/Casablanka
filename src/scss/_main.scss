@@ -190,3 +190,9 @@ body {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10-11 STYLES
+  .introduction__title {
+    margin-top: 115px;
+  }
+}
+
