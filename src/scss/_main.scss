@@ -7,6 +7,64 @@ body {
   height: 100%;
 }
 
+.ui-button {
+  background-color: transparent;
+  outline: none;
+  border: 3px solid #fff;
+  padding: 32px 100px;
+  color: #fff;
+  cursor: pointer;
+  font-family: $amble-bold;
+  position: relative;
+  transition: transform .3s ease;
+  &.ui-button-small {
+    border: 3px solid #000;
+    padding: 15px 100px;
+    &:hover {
+      .ui-button__text {
+        color: #fff;
+      }
+    }
+    &::before {
+      background-color: #000;
+    }
+    .ui-button__text {
+      color: #000;
+      font-size: 24px;
+    }
+  }
+  &:active {
+    transform: scale(.9);
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transition: .5s ease;
+    font-size: 30px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    height: 100%;
+    transition: .5s ease;
+    width: 0%;
+    z-index: 1;
+  }
+  &:hover {
+    .ui-button__text {
+      color: #000;
+    }
+    &::before {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
 // SLIDEOUT STYLES
 .slideout-menu {
   position: fixed;
@@ -58,11 +116,15 @@ body {
   background: linear-gradient(to right, #e28a44 0%,#c14f49 100%);
   background-image: url('./../../assets/img/header_bg.jpg');
   background-size: cover;
+  background-position: 50% 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   box-shadow: 0px -10px 15px 5px rgba(#000, .2);
+  &__description {
+    max-width: 635px;
+  }
   &__menu {
     &-item {
       color: #e28a44;
@@ -173,6 +235,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  padding: 0 15px;
   &__title {
     margin: 0;
     text-transform: uppercase;
@@ -187,12 +250,18 @@ body {
     font-family: $amble-light;
     font-size: 22px;
     line-height: 36px;
+    max-width: 750px;
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10-11 STYLES
-  .introduction__title {
-    margin-top: 115px;
-  }
+.pure-creativity {
+  min-height: 500px;
+  background-image: url('./../../assets/img/creative_section_bg.jpg');
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
