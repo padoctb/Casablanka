@@ -16,6 +16,7 @@ menuButton.addEventListener('click', function openMenu() {
   slideout.toggle();
 });
 
+
 // OUR WORK IMAGES
 const workTypes = document.querySelector('.our-work__types');
 let activeType = workTypes.children[0]
