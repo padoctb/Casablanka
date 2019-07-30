@@ -259,7 +259,7 @@ body {
   }
 }
 
-.pure-creativity {
+.image-section {
   min-height: 500px;
   background-image: url('./../../assets/img/creative_section_bg.jpg');
   background-repeat: no-repeat;
@@ -269,6 +269,10 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  &-help {
+    background-image: url('./../../assets/img/help_section_bg.jpg');
+    background-position: 0 50%;
+  }
   &::before {
     position: absolute;
     content: "";

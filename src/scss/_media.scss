@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 580px) {
   .our-work {
     &__image {
       margin-right: 5px;
@@ -62,7 +62,7 @@
   .introduction__title {
     margin-top: 115px;
   }
-  .pure-creativity {
+  .image-section {
     .ui-button {
       position: absolute;
       top: 50%;

@@ -32,7 +32,7 @@ workTypes.addEventListener('click', (e) => {
 
     imagesArray.forEach((type) => {
       if (type.getAttribute('data-image-type') !== activeType.getAttribute('data-type')) {
-        $(type).hide(300)
+        $(type).hide(500)
       }
       if (type.getAttribute('data-image-type') === activeType.getAttribute('data-type')) {
         $(type).show(500)
