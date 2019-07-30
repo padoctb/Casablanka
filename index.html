@@ -60,57 +60,61 @@
       <div class="our-work__line"></div>
 
       <ul class="our-work__types">
-        <li class="our-work__type our-work__type-active">All</li>
-        <li class="our-work__type">Branding</li>
-        <li class="our-work__type">Web Design</li>
-        <li class="our-work__type">Mobile UI</li>
-        <li class="our-work__type">Illustrations</li>
+        <li data-type='all' class="our-work__type our-work__type-active">All</li>
+        <li data-type='branding' class="our-work__type">Branding</li>
+        <li data-type='web-design' class="our-work__type">Web Design</li>
+        <li data-type='mobile-ui' class="our-work__type">Mobile UI</li>
+        <li data-type='illustrations' class="our-work__type">Illustrations</li>
       </ul>
 
       <div class="our-work__images">
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='branding'>
           <img src="./assets/img/work_1.jpg" alt="work-1">
           <div class="image__content">
-            <h4 class="image__content-title">Mobile UI</h4>
-            <div class="image__content-name">Google Mail</div>
+            <h4 class="image__content-title">Branding</h4>
+            <div class="image__content-name">Pancakes</div>
           </div>
         </div>
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='branding'>
           <img src="./assets/img/work_2.jpg" alt="work-2">
           <div class="image__content">
-            <h4 class="image__content-title">Mobile UI</h4>
-            <div class="image__content-name">Google Mail</div>
+            <h4 class="image__content-title">Branding</h4>
+            <div class="image__content-name">Ocean Blue</div>
           </div>
         </div>
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='mobile-ui'>
           <img src="./assets/img/work_3.jpg" alt="work-3">
           <div class="image__content">
             <h4 class="image__content-title">Mobile UI</h4>
             <div class="image__content-name">Google Mail</div>
           </div>
         </div>
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='web-design'>
           <img src="./assets/img/work_4.jpg" alt="work-4">
           <div class="image__content">
-            <h4 class="image__content-title">Mobile UI</h4>
-            <div class="image__content-name">Google Mail</div>
+            <h4 class="image__content-title">Web Design</h4>
+            <div class="image__content-name">Portico</div>
           </div>
         </div>
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='illustrations'>
           <img src="./assets/img/work_5.jpg" alt="work-5">
           <div class="image__content">
-            <h4 class="image__content-title">Mobile UI</h4>
-            <div class="image__content-name">Google Mail</div>
+            <h4 class="image__content-title">Illustrations</h4>
+            <div class="image__content-name">Smash</div>
           </div>
         </div>
-        <div class="our-work__image">
+        <div class="our-work__image" data-image-type='web-design'>
           <img src="./assets/img/work_6.jpg" alt="work-6">
           <div class="image__content">
-            <h4 class="image__content-title">Mobile UI</h4>
-            <div class="image__content-name">Google Mail</div>
+            <h4 class="image__content-title">Web Design</h4>
+            <div class="image__content-name">Salt</div>
           </div>
         </div>
       </div>
+
+      <button class="ui-button ui-button-small">
+          <span class="ui-button__text">Pure Creativity.</span>
+      </button>
 
     </section>
 
