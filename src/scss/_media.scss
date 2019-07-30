@@ -1,0 +1,8 @@
+@media screen and (max-width: 540px) {
+  .main-header {
+    background-position: -500px 0;
+    &__title {
+      font-size: 38px;
+    }
+  }
+}

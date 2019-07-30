@@ -9,3 +9,70 @@ body {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.main-header {
+  height: 100vh;
+  background-color: #ea9d48;
+  background: linear-gradient(to right, #e28a44 0%,#c14f49 100%);
+  background-image: url('./../../assets/img/header_bg.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 48px;
+    background-image: url('./../../assets/img/icons/mouse.svg');
+    bottom: 60px;
+    left: 50%;
+    margin-left: -15px;
+    animation: pulse 2s;
+    animation-iteration-count: infinite;
+  }
+  &__line {
+    @include line(#fff, 45px, 45px);
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: $bj-bold;
+    margin: 0;
+  }
+  &__content {
+    text-align: center;
+    color: #fff;
+    padding: 0 10px;
+  }
+  &__menu-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    transition: .3s ease;
+    top: 60px;
+    left: 50px;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .menu-btn__line {
+      background-color: #fff;
+      height: 4px;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      &:nth-child(2) {
+        top: 10px
+      }
+      &:last-child {
+        top: 20px;
+      }
+    }
+  }
+}

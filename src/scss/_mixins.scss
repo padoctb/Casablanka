@@ -1,0 +1,10 @@
+@mixin line($color, $marginTop: 0, $marginBottom: 0) {
+  background-color: $color;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+  height: 2px;
+  width: 86px;
+  position: relative;
+  left: 50%;
+  margin-left: -43px;
+}
