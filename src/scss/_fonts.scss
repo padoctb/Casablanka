@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Big John PRO Bold';
+  src: local('Big John PRO Bold'), local('Big-John-PRO-Bold'),
+      url('../../assets/fonts/BigJohnPRO-Bold.woff2') format('woff2'),
+      url('../../assets/fonts/BigJohnPRO-Bold.woff') format('woff'),
+      url('../../assets/fonts/BigJohnPRO-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Big John PRO Light';
+  src: local('Big John PRO Light'), local('Big-John-PRO-Light'),
+      url('../../assets/fonts/BigJohnPRO-Light.woff2') format('woff2'),
+      url('../../assets/fonts/BigJohnPRO-Light.woff') format('woff'),
+      url('../../assets/fonts/BigJohnPRO-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amble Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amble Regular'), url('../../assets/fonts/Amble-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Amble Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Amble Bold'), url('../../assets/fonts/Amble-Bold.woff') format('woff');
+}
+
+ @font-face {
+  font-family: 'Amble Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amble Light'), url('../../assets/fonts/Amble-Light.woff') format('woff');
+}
