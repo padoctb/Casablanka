@@ -1,3 +1,14 @@
+@media screen and (max-width: 950px) {
+  .our-clients__logos {
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .our-clients__logo {
+    margin: 10px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .our-work {
     &__images {

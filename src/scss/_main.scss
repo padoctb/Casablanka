@@ -396,3 +396,38 @@ body {
     }
   }
 }
+
+.our-clients {
+  background-color: #f4f4f4;
+  // min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 130px;
+  &__content {
+    width: 1172px;
+  }
+  &__logos {
+    display: flex;
+    max-width: 1172px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+  &__logo {
+    display: block;
+    filter: grayscale(1);
+    transition: filter .3s ease;
+    &:hover {
+      filter: grayscale(0);
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__line {
+    @include line(#000, 65px, 70px);
+  }
+}
