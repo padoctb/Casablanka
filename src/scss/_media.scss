@@ -1,3 +1,30 @@
+@media screen and (max-width: 700px) {
+  .our-work {
+    &__images {
+      margin-top: 30px;
+    }
+    &__types {
+      justify-content: flex-start;
+    }
+    &__type {
+      font-size: 16px;
+    }
+    &__image {
+      margin-right: 5px;
+      margin-left: 5px;
+      width: calc(33% - 10px);
+      .image__content {
+        &-title {
+          font-size: 14px;
+        }
+        &-name {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 540px) {
   .main-header {
     &__title {
@@ -17,6 +44,16 @@
     }
     &__text {
       font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .our-work {
+    &__image {
+      margin-right: 5px;
+      margin-left: 5px;
+      width: calc(50% - 10px);
     }
   }
 }

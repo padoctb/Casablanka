@@ -5,6 +5,14 @@ body {
   font-family: $amble-regular;
   width: 100%;
   height: 100%;
+  min-width: 320px;
+}
+
+// UI ELEMENTS
+.section-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: $bj-bold;
 }
 
 .ui-button {
@@ -228,6 +236,7 @@ body {
   }
 }
 
+// SECTIONS
 .introduction {
   min-height: 500px;
   display: flex;
@@ -236,11 +245,6 @@ body {
   text-align: center;
   flex-direction: column;
   padding: 0 15px;
-  &__title {
-    margin: 0;
-    text-transform: uppercase;
-    font-family: $bj-bold;
-  }
   &__line {
     @include line(#000, 65px, 65px);
     left: 0;
@@ -257,11 +261,124 @@ body {
 .pure-creativity {
   min-height: 500px;
   background-image: url('./../../assets/img/creative_section_bg.jpg');
-  // background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+  }
 }
 
+.our-work {
+  padding: 100px 15px 70px 15px;
+  &__image {
+    margin-bottom: 20px;
+    width: calc(33% - 30px);
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    .image__content {
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      opacity: 0;
+      transition: .3s ease;
+      padding-bottom: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 48px;
+        background-color: #d87843;
+        bottom: 0;
+        left: 50%;
+        margin-left: -24px;
+      }
+      &-title {
+        font-size: 18px;
+        font-family: $bj-bold;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      &-name {
+        font-size: 24px;
+        font-family: $amble-regular;
+      }
+    }
+    &:hover {
+      .image__content {
+        opacity: 1;
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    &::before {
+      transition: .3s ease;
+      opacity: 0;
+      position: absolute;
+      content: "";
+      width: calc(100% - 16px);
+      height: calc(100% - 20px);
+      background-color: rgba(#000, .7);
+      border: 8px solid #000;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__images {
+    margin: 0 auto;
+    max-width: 1175px;
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__line {
+    @include line(#000, 65px, 75px);
+  }
+  &__title {
+    text-align: center;
+    margin: 0;
+  }
+  &__types {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    max-width: 660px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__type {
+    font-size: 18px;
+    font-family: $bj-light;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    cursor: pointer;
+    &:hover:not(&-active) {
+      opacity: .7;
+    }
+    &-active {
+      font-family: $bj-bold;
+    }
+  }
+}
