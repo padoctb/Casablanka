@@ -7,6 +7,30 @@
       }
     }
   }
+  .contact {
+    .contact__form-input {
+      &-name, &-email, &-message {
+        min-width: 100% !important;
+        margin-top: 10px;
+        margin-right: 0;
+      }
+      &-name {
+        // margin-right: 20px;
+      }
+    }
+    &::before {
+      top: 0;
+      height: 50%;
+      width: 100%;
+    }
+    &__form {
+      margin-top: 80px;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -107,9 +131,17 @@
   .video-section {
     height: 300px;
   }
+  .image-section {
+    height: 300px;
+  }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10-11 STYLES
+  .contact {
+    justify-content: flex-start;
+    min-height: 0px;
+    padding: 80px 0;
+  }
   .introduction__title {
     margin-top: 115px;
   }

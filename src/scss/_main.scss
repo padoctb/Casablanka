@@ -21,6 +21,7 @@ body {
   font-size: 22px;
   line-height: 36px;
   max-width: 750px;
+  padding: 0 15px;
 }
 
 .section-title {
@@ -259,11 +260,10 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 0 15px;
 }
 
 .image-section {
-  min-height: 500px;
+  height: 500px;
   background-image: url('./../../assets/img/creative_section_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -634,5 +634,106 @@ body {
   }
   .why-choose-us__slider {
     width: 100%;
+  }
+}
+
+.quote-section {
+  background-image: url('./../../assets/img/quote_section_bg.jpg');
+  background-position: 50% 75%;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 110px 15px;
+}
+
+.contact {
+  min-height: 500px;
+  position: relative;
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+  &__form {
+    .ui-button {
+      margin-top: 40px;
+      float: right;
+      width: 180px;
+      padding: 18px 60px;
+    }
+    .contact__form-input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #afafaf;
+      padding: 15px 30px 15px 30px;
+      box-sizing: border-box;
+      &-name, &-email {
+        max-width: 305px;
+      }
+      &-name {
+        margin-right: 60px;
+      }
+      &-message {
+        width: 100%;
+        margin-top: 70px;
+      }
+      &::placeholder {
+        font-family: $amble-regular;
+        font-size: 18px;
+        font-style: italic;
+        color: #676767;
+      }
+    }
+  }
+  &__location {
+    &-title {
+      font-size: 24px;
+      font-family: $bj-bold;
+      text-transform: uppercase;
+    }
+    &-address {
+      font-size: 22px;
+      font-family: $amble-light;
+      font-style: italic;
+      line-height: 1.6em;
+      margin-bottom: 15px;
+    }
+    &-link {
+      &:hover {
+        opacity: .5;
+      }
+    }
+    &-social {
+      max-width: 225px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .contact__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+    left: 0;
+    top: 0;
+    width: 30%;
+    width: 39%;
+    height: 100%;
   }
 }
