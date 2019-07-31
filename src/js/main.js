@@ -1,5 +1,30 @@
 import Slideout from 'slideout'
 import $ from 'jquery'
+import 'slick-carousel'
+
+// SLIDER
+$(document).ready(() => {
+  $('.why-choose-us__slider').slick({
+    slidesToShow: 3,
+    arrows: false,
+    infinite: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 970,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
 
 // MENU
 const slideout = new Slideout({

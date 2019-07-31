@@ -578,10 +578,61 @@ body {
 
 .why-choose-us {
   padding-top: 111px;
+  padding-bottom: 55px;
+  .slick-dots {
+    li {
+      &.slick-active {
+        button {
+          &::before {
+            color: #d87843;
+            font-size: 16px;
+            opacity: 1;
+          }
+        }
+      }
+      button {
+        &::before {
+          font-size: 16px;
+          opacity: .2;
+        }
+      }
+    }
+  }
+  &__slider-item {
+    margin-bottom: 60px;
+  }
+  .why-choose-us__slide-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .image {
+      display: flex;
+      justify-content: center;
+      min-height: 150px;
+      padding-bottom: 30px;
+      align-items: flex-end;
+    }
+    .slide-content__name {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .slide-content__description {
+      font-size: 16px;
+      max-width: 342px;
+      margin: 0 auto;
+    }
+  }
+  &__slider {
+    margin-top: 50px;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .why-choose-us__slider {
+    width: 100%;
   }
 }
