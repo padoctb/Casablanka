@@ -53,4 +53,5 @@ const video = document.getElementById('video-section__video')
 playBtn.addEventListener('click', () => {
   playBtn.classList.add('active')
   video.play()
+  setTimeout(() => { playBtn.style.display = 'none' }, 500)
 })
