@@ -430,3 +430,110 @@ body {
     @include line(#000, 65px, 70px);
   }
 }
+
+.about-us {
+  padding: 110px 15px 80px 15px;
+  .wrapper {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__member-position {
+    font-size: 18px;
+    font-family: $amble-bold;
+  }
+  &__member-name {
+    text-transform: uppercase;
+    font-family: $bj-bold;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  &__member-info {
+    position: absolute;
+    bottom: 24px;
+    color: #fff;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .3s ease;
+  }
+  &__team-member {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    opacity: .4;
+    cursor: pointer;
+    transition: .3s ease;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    text-decoration: none;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 32px;
+      background-image: url('./../../assets/img/icons/link.svg');
+      right: 14px;
+      top: 12px;
+      opacity: 0;
+    }
+    &:hover {
+      opacity: 1;
+      border: 4px solid #000;
+      .about-us__member-info {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__team-member-empty {
+    border: 1px solid #000;
+    opacity: 1;
+    .member-epty__content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .ui-button {
+      width: 180px;
+      padding: 15px 0;
+    }
+    & .member-empty__line {
+      @include line(#000, 40px, 40px);
+    }
+    & .member-empty__title {
+      font-size: 24px;
+      font-family: $bj-bold;
+      text-transform: uppercase;
+      width: 115px;
+      margin: 0 auto;
+      color: #000;
+    }
+  }
+  &__team-member-active {
+    opacity: 1;
+    border: 4px solid #000;
+    .about-us__member-info {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+  &__team-members {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}

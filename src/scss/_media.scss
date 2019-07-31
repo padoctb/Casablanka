@@ -1,3 +1,14 @@
+@media screen and (max-width: 1000px) {
+  .about-us {
+    &__team-member-empty {
+      .ui-button {
+        width: 90%;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 950px) {
   .our-clients__logos {
     max-width: 800px;
@@ -7,9 +18,35 @@
   .our-clients__logo {
     margin: 10px;
   }
+  .about-us {
+    &__team-member-empty {
+      .member-empty__line {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .member-empty__title {
+        font-size: 18px;
+      }
+      .ui-button-small {
+        width: 90%;
+        padding: 5px 0 !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .about-us {
+    &__team-member {
+      width: calc(50% - 30px);
+      .about-us__member-name {
+        font-size: 18px;
+      }
+      .about-us__member-position {
+        font-size: 14px;
+      }
+    }
+  }
   .our-work {
     &__images {
       margin-top: 30px;
