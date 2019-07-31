@@ -44,3 +44,13 @@ workTypes.addEventListener('click', (e) => {
     })
   }
 })
+
+// VIDEO CONTROL
+
+const playBtn = document.querySelector('.video-section__play-btn');
+const video = document.getElementById('video-section__video')
+
+playBtn.addEventListener('click', () => {
+  playBtn.classList.add('active')
+  video.play()
+})

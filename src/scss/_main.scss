@@ -537,3 +537,38 @@ body {
     width: 100%;
   }
 }
+
+.video-section {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  &__play-btn {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    background-image: url('./../../assets/img/icons/play.svg');
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -32px;
+    left: 50%;
+    margin-left: -32px;
+    cursor: pointer;
+    z-index: 100;
+    transition: .5s ease;
+    &.active {
+      transform: translateY(-50px) !important;
+      opacity: 0;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  #video-section__video {
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
