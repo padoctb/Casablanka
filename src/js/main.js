@@ -2,6 +2,23 @@ import Slideout from 'slideout'
 import $ from 'jquery'
 import 'slick-carousel'
 
+// SMOOTH SCROLL
+$(document).ready(() => {
+  $('a').on('click', function smScroll(event) {
+    if (this.hash !== '') {
+      event.preventDefault();
+
+      const { hash } = this;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top,
+      }, 1500, () => {
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
 // SLIDER
 $(document).ready(() => {
   $('.why-choose-us__slider').slick({
@@ -32,9 +49,24 @@ const slideout = new Slideout({
   menu: document.getElementById('menu'),
   padding: 256,
   tolerance: 70,
+  duration: 300,
 });
 
 const menuButton = document.querySelector('.main-header__menu-btn')
+
+const menuLinks = document.querySelector('.main-header__menu-list')
+
+menuLinks.addEventListener('click', (e) => {
+  if (e.target.getAttribute('href') || e.target.tagName === 'LI') {
+    const sliderWr = document.querySelector('.slideout-menu');
+    // sliderWr.style.display = 'none'
+    menuButton.classList.remove('active')
+    slideout.close()
+    // setTimeout(() => {
+    //   sliderWr.style.display = 'block'
+    // }, 300)
+  }
+})
 
 menuButton.addEventListener('click', function openMenu() {
   this.classList.toggle('active')
