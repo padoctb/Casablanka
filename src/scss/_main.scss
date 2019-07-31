@@ -745,3 +745,30 @@ body {
     height: 100%;
   }
 }
+
+.main-footer {
+  background-color: #222222;
+  padding: 100px 15px;
+  &__logo {
+    max-width: 380px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__copyright {
+    margin-top: 65px;
+    text-align: center;
+    &-orange {
+      color: #d87843;
+    }
+  }
+}
