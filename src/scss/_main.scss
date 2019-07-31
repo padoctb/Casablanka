@@ -9,6 +9,20 @@ body {
 }
 
 // UI ELEMENTS
+
+.section-line {
+  @include line(#000, 65px, 65px);
+  left: 0;
+  margin-left: 0;
+}
+
+.section-text {
+  font-family: $amble-light;
+  font-size: 22px;
+  line-height: 36px;
+  max-width: 750px;
+}
+
 .section-title {
   margin: 0;
   text-transform: uppercase;
@@ -246,17 +260,6 @@ body {
   text-align: center;
   flex-direction: column;
   padding: 0 15px;
-  &__line {
-    @include line(#000, 65px, 65px);
-    left: 0;
-    margin-left: 0;
-  }
-  &__text {
-    font-family: $amble-light;
-    font-size: 22px;
-    line-height: 36px;
-    max-width: 750px;
-  }
 }
 
 .image-section {
@@ -570,5 +573,15 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+}
+
+.why-choose-us {
+  padding-top: 111px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
