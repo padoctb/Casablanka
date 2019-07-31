@@ -58,13 +58,8 @@ const menuLinks = document.querySelector('.main-header__menu-list')
 
 menuLinks.addEventListener('click', (e) => {
   if (e.target.getAttribute('href') || e.target.tagName === 'LI') {
-    const sliderWr = document.querySelector('.slideout-menu');
-    // sliderWr.style.display = 'none'
     menuButton.classList.remove('active')
     slideout.close()
-    // setTimeout(() => {
-    //   sliderWr.style.display = 'block'
-    // }, 300)
   }
 })
 
